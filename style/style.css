@@ -2,6 +2,7 @@
 html {
     font-size: 16px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     padding: 0;
@@ -16,11 +17,11 @@ body {
     border: 0;
     overflow: hidden;
     margin: -1px;
-
 }
 /* header styling */
 header {
     position: fixed;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +30,6 @@ header {
     width: 100%;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
-    z-index: 9998;
 }
 .headerTitle {
     margin-left: 2rem;
@@ -53,6 +53,9 @@ header button {         /* remember to put this on!!! delete display none (for p
     background-size: cover;
     border: 0;
     z-index: 9999;
+}
+#mobile-navigation {
+    display: none;
 }
 #primary-navigation {
     margin-right: 25%;
@@ -130,17 +133,19 @@ main {
 }
 .main-container {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
     align-content: center;
     color: white;
+    padding: 40px 30px;
 }
 .info-container {
-    width: 60%;
-    min-width: 200px;
-    padding: 40px 30px;
+    width: 50%;
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .info-container h3 {
     font-size: 130%;
@@ -149,6 +154,7 @@ main {
 .info-container .bio {
     font-style: italic;
     margin: 0;
+    padding-bottom: 30px;
 }
 .info-container h4 {
     font-size: 130%;
@@ -157,10 +163,19 @@ main {
 .skills {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
     justify-content: space-around;
+    padding: 30px;
 }
 .skills div {
-    padding: 0px 30px 30px 30px;
+    height: 150px;
+    flex: 1 1 150px;
+    background: black;
+    transition: 3s;
+}
+.skills div:hover {
+    background: linear-gradient(to right, rgb(128, 128, 128) 5%, black 10%, black 90%, rgb(128, 128, 128) 95%);
+    transition: 3s;
 }
 .skills h5 {
     text-decoration: underline;
@@ -255,4 +270,34 @@ footer {
 footer p {
     margin: 0;
     padding: 5px 15px;
+}
+
+@media only screen and (max-width: 960px) {
+    .headerTitle {
+        font-size: 2rem;
+        transition: 0s;
+    }
+    #primary-navigation ul {
+        font-size: 1rem;
+    }
+    .skills {
+        padding: 30px 0px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header {
+        justify-content: center;
+    }
+    .headerTitle {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    #primary-navigation {
+        margin: 0;
+    }
+    #primary-navigation ul {
+        padding: 0;
+    }
 }

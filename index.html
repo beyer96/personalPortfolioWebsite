@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- meta tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta charset="UTF-8">
+        
+        <!-- External fonts - 'Roboto Condensed', sans-serif -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Styling -->
+        <link href="style/style.css" rel="stylesheet">
+        
+        <!-- Javascript -->
+        <script src="js/javascript.js"></script>
+
+        <!-- title of the page -->
+        <title>Lukáš Beyer | Personal Portfolio</title>
+    </head>
+    <body>
+
+        <!-- header - fixed menu -->
+        <header>
+            <!-- "title" on the left side -->
+            <span class="headerTitle">Personal Portfolio</span>
+
+            <!-- actual menu on the right side -->
+            <!-- button toggling the menu (span with text "menu" for screen readers only) -->
+            <button aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <nav id="primary-navigation">
+                <ul data-menu="false">
+                    <a href="#"><li>About Me</li></a>
+                    <span class="divider">|</span>
+                    <a href="./pages/projects.html"><li>Projects</li></a>
+                    <span class="divider">|</span>
+                    <a href="./pages/contact.html"><li>Contact</li></a>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            
+            <section class="introSection top">
+                <div class="introContainer">
+                    <h1 class="sr-only">Lukáš Beyer | Personal Portfolio</h1>
+                    <h2>Lukáš Beyer</h2>
+                    <p class="complement">A rising star in programming world</p>
+                </div>
+            </section>
+
+            <section id="aboutMe" class="top">
+                <div class="main-container">
+                    <div class="info-container">
+                        <h3>About Me</h3>
+                        <p class="bio">I am full-stack programmer in process. Coding since 01/2022 with previous attempts 
+                        (in high school I did touch typing app for my graduation work in 2016). Now starting with front-end knowledge, but soon I'll be ready for job!</p>
+                        <h4>Skills</h4>
+                        <div class="skills">
+                            <div class="front-end">
+                                <h5>Front-end</h5>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Markdown</li>
+                                    <li>DOM</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                            <div class="back-end">
+                                <h5>Back-end</h5>
+                                <ul>
+                                    <li>PHP - coming soon</li>
+                                    <li>SQL - coming soon</li>
+                                    <li>PostgreSQL - coming soon</li>
+                                </ul>
+                            </div>
+                            <div class="other">
+                                <h5>Other</h5>
+                                <ul>
+                                    <li>Bash</li>
+                                    <li>GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="./res/img/anonymousProgrammer.jpg" alt="Anonymous Programmer Illustrative Image">
+                        <figcaption>Anonymous programmer photo, because I don't have any good photo right now.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="projectSection">
+                <h3>See my projects</h3>
+                <div class="project-container">
+                    <p>Nothing what would be worth mentioning yet :(</p>
+                </div>
+            </section>
+
+            <section id="contactSection">
+                <h3>Contact Me</h3>
+                <div class="contacts-container">
+                    
+                </div>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+/* main styling */ 
+html {
+    font-size: 16px;
+}
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.sr-only {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    margin: -1px;
+
+}
+/* header styling */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, black 75%, rgb(110, 110, 110));
+    height: 70px;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+    z-index: 9998;
+}
+.headerTitle {
+    margin-left: 2rem;
+    color: white;
+    font-size: 3rem;
+    transition: 3s;
+}
+.headerTitle:hover {
+    color:rgb(172, 172, 172);
+    font-weight: bold;
+    transition: 1s;
+}
+header button {         /* remember to put this on!!! delete display none (for phones only) */
+    display: none;  
+    position: absolute;
+    right: 2rem;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: url("../res/img/hamburgerMenu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    z-index: 9999;
+}
+#primary-navigation {
+    margin-right: 25%;
+}
+#primary-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+#primary-navigation a {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    border-bottom: 3px solid black;
+}
+#primary-navigation a:hover {
+    border-bottom: 3px solid white;
+    transition: 0.5s;
+}
+#primary-navigation li {
+    list-style: none;
+}
+#primary-navigation span {
+    padding: 5px 0.7rem;
+    color:white;
+}
+.top {
+    position: relative;
+    top: 63px;
+}
+
+/* intro container */
+
+.introContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url("../res/img/codingBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.introContainer::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: black;
+    opacity: 0.75;
+}
+.introContainer h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    z-index: 1000;
+}
+.introContainer .complement {
+    color: white;
+    font-size: 1.3rem;
+    font-style: italic;
+    z-index: 1000;
+}
+
+#aboutMe {
+    background: black;
+    width: 100%;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.info-container {
+    width: 60%;
+    padding: 40px 30px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.info-container h3 {
+    font-size: 130%;
+    font-family: monospace;
+}
+.info-container .bio {
+    font-style: italic;
+    margin: 0;
+}
+.info-container h4 {
+    font-size: 130%;
+    font-family: monospace;
+}
+.skills {
+    display: flex;
+    flew-flow: row wrap;
+    justify-content: space-evenly;
+}
+.skills h5 {
+    text-decoration: underline;
+    font-size: 110%;
+    margin: 0;
+}
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+.main-container figure {
+    width: 40%;
+}
+.main-container figure img {
+    width: 100%;
+    height: auto;
+}

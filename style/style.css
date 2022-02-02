@@ -1,6 +1,7 @@
 /* main styling */ 
 html {
     font-size: 16px;
+    box-sizing: border-box;
 }
 body {
     padding: 0;
@@ -78,7 +79,7 @@ header button {         /* remember to put this on!!! delete display none (for p
     padding: 5px 0.7rem;
     color:white;
 }
-.top {
+main {
     position: relative;
     top: 63px;
 }
@@ -121,6 +122,8 @@ header button {         /* remember to put this on!!! delete display none (for p
     z-index: 1000;
 }
 
+/* About Me container */
+
 #aboutMe {
     background: black;
     width: 100%;
@@ -129,10 +132,12 @@ header button {         /* remember to put this on!!! delete display none (for p
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     color: white;
 }
 .info-container {
     width: 60%;
+    min-width: 200px;
     padding: 40px 30px;
     display: flex;
     flex-flow: column wrap;
@@ -151,8 +156,11 @@ header button {         /* remember to put this on!!! delete display none (for p
 }
 .skills {
     display: flex;
-    flew-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.skills div {
+    padding: 0px 30px 30px 30px;
 }
 .skills h5 {
     text-decoration: underline;
@@ -165,8 +173,86 @@ header button {         /* remember to put this on!!! delete display none (for p
 }
 .main-container figure {
     width: 40%;
+    min-width: 200px;
 }
 .main-container figure img {
     width: 100%;
     height: auto;
+}
+
+/* Projects container */
+#projectSection {
+    width: 100%;
+    background:rgb(190, 188, 188);
+    height: 300px;
+}
+#projectSection h3 {
+    margin: 0;
+    padding: 30px 20px;
+}
+
+/* contact container */
+#contactSection {
+    width: 100%;
+    background: beige;
+    
+}
+#contactSection h3 {
+    margin: 0;
+    padding: 30px 20px 0px 20px;
+
+}
+.contacts-container {
+    padding: 10px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contact {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px 30px 40px;
+}
+.email {
+    width: 55px;
+    height: 40px;
+    background: url("../res/img/emailIcon.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 20px;
+ }
+.phone {
+   width: 40px;
+   height: 40px;
+   background: url("../res/img/phoneIcon.svg");
+   background-repeat: no-repeat;
+   background-size: cover; 
+   margin: 20px;
+}
+.linkedIn {
+    width: 40px;
+    height: 40px;
+    background: url("../res/img/linkedinIcon.svg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 20px;
+ }
+/* footer */ 
+
+footer {
+    background: black;
+    width: 100%;
+    text-align: left;
+    color: white;
+    position: relative;
+    top: 63px;
+}
+footer p {
+    margin: 0;
+    padding: 5px 15px;
 }
